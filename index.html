@@ -1,0 +1,185 @@
+<title>Privacidade do Limes</title>
+<style>
+  :root{
+    --bg:#faf9f6;
+    --surface:#ffffff;
+    --border:#e4e1da;
+    --text:#1c1b19;
+    --text-dim:#6b6660;
+    --accent:#2f6e4f;
+    --accent-soft:#e7f1ea;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17191a;
+      --surface:#1f2224;
+      --border:#33373a;
+      --text:#eceae6;
+      --text-dim:#9b9892;
+      --accent:#6fcf9c;
+      --accent-soft:#1f3328;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17191a;
+    --surface:#1f2224;
+    --border:#33373a;
+    --text:#eceae6;
+    --text-dim:#9b9892;
+    --accent:#6fcf9c;
+    --accent-soft:#1f3328;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height:1.6;
+    padding-inline:20px;
+    padding-block:48px;
+  }
+  .page{
+    max-width:640px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:'Source Sans 3', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 10px;
+  }
+  h1{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:clamp(28px,6vw,38px);
+    font-weight:600;
+    line-height:1.15;
+    text-wrap:balance;
+    margin:0 0 6px;
+  }
+  .updated{
+    color:var(--text-dim);
+    font-size:14px;
+    margin:0 0 36px;
+  }
+  .intro{
+    font-size:17px;
+    color:var(--text);
+    border-left:3px solid var(--accent);
+    background:var(--accent-soft);
+    padding:16px 18px;
+    border-radius:6px;
+    margin:0 0 40px;
+  }
+  h2{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:21px;
+    font-weight:600;
+    margin:40px 0 12px;
+  }
+  p{margin:0 0 14px; max-width:65ch;}
+  ul{margin:0 0 14px; padding-left:20px;}
+  li{margin-bottom:8px; max-width:62ch;}
+  strong{font-weight:600;}
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px 18px;
+    margin:0 0 14px;
+  }
+  .card h3{
+    font-size:15px;
+    font-weight:600;
+    margin:0 0 4px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .card p{margin:0; font-size:14.5px; color:var(--text-dim);}
+  .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent); flex-shrink:0;
+  }
+  .contact{
+    margin-top:44px;
+    padding-top:24px;
+    border-top:1px solid var(--border);
+  }
+  .contact a{color:var(--accent); font-weight:600; text-decoration:none;}
+  .contact a:hover{text-decoration:underline;}
+  footer{
+    margin-top:48px;
+    font-size:13px;
+    color:var(--text-dim);
+  }
+</style>
+
+<div class="page">
+  <p class="eyebrow">Limes</p>
+  <h1>Política de Privacidade</h1>
+  <p class="updated">Última atualização: 3 de outubro de 2026</p>
+
+  <p class="intro">Resumindo antes de entrar nos detalhes: o Limes não tem servidor, não tem conta de usuário e não envia nenhum dado seu pra lugar nenhum. Tudo o que o app precisa pra funcionar fica guardado só no seu próprio iPhone.</p>
+
+  <h2>O que o Limes faz</h2>
+  <p>O Limes usa a localização do seu iPhone pra saber quando você está dentro ou fora de "zonas seguras" que você mesmo define (como sua casa), e oculta ou bloqueia automaticamente os aplicativos que você escolher proteger quando você sai dessas zonas.</p>
+
+  <h2>Dados que o app acessa</h2>
+
+  <div class="card">
+    <h3><span class="dot"></span>Localização</h3>
+    <p>Usada em tempo real, só no aparelho, pra comparar sua posição com as zonas seguras que você configurou. Nunca é enviada pra nenhum servidor, nem guardada em nuvem, nem compartilhada com ninguém — nem com o próprio desenvolvedor do app.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot"></span>Tempo de Uso (Screen Time)</h3>
+    <p>Usado pra ocultar ou bloquear os apps que você selecionar. A seleção dos apps é feita numa tela do próprio iPhone (controlada pela Apple) — o Limes nunca vê nem armazena quais apps específicos você escolheu, só sabe que alguns estão protegidos.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot"></span>Face ID / Touch ID</h3>
+    <p>Usado apenas pra confirmar que é você desativando a proteção. O Limes nunca tem acesso aos seus dados biométricos — isso é controlado inteiramente pelo iOS.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot"></span>Senha do app (opcional)</h3>
+    <p>Se você criar uma senha própria do Limes, ela é transformada num hash (SHA-256) e guardada no Keychain do seu iPhone — criptografado pelo próprio sistema. O Limes nunca guarda a senha em texto puro, e ela nunca sai do aparelho.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot"></span>Notificações</h3>
+    <p>São geradas e entregues localmente pelo próprio iPhone, sem passar por nenhum servidor externo.</p>
+  </div>
+
+  <h2>O que o Limes não faz</h2>
+  <ul>
+    <li>Não tem conta de usuário, login ou cadastro.</li>
+    <li>Não tem servidor próprio — nenhum dado seu trafega pela internet.</li>
+    <li>Não usa rastreadores, SDKs de publicidade ou analytics de terceiros.</li>
+    <li>Não vende, aluga ou compartilha dados com ninguém.</li>
+    <li>Não sabe, e não tem como saber, quais aplicativos específicos você protege.</li>
+  </ul>
+
+  <h2>Compras no app</h2>
+  <p>O Limes oferece doações opcionais via compra no app, processadas inteiramente pela Apple através da sua conta na App Store. O Limes não recebe nem armazena nenhum dado de pagamento — isso fica inteiramente a cargo da Apple.</p>
+
+  <h2>Backups do iPhone</h2>
+  <p>Se você faz backup do seu iPhone pelo iCloud ou pelo computador, as preferências do Limes (como suas zonas seguras) podem ser incluídas nesse backup, da mesma forma que qualquer outro app — isso é um comportamento padrão do iOS, não algo que o Limes controla ou acessa.</p>
+
+  <h2>Crianças</h2>
+  <p>O Limes não é direcionado a crianças e não coleta intencionalmente dados de menores de 13 anos.</p>
+
+  <h2>Mudanças nesta política</h2>
+  <p>Se essa política mudar, a data no topo desta página é atualizada. Mudanças relevantes também podem ser comunicadas dentro do próprio app.</p>
+
+  <div class="contact">
+    <h2 style="margin-top:0">Contato</h2>
+    <p>Dúvidas sobre privacidade? Escreve pra <a href="mailto:imoraes.goncalves@gmail.com">imoraes.goncalves@gmail.com</a>.</p>
+  </div>
+
+  <footer>Limes — um projeto independente de proteção contra fraude financeira após roubo de celular.</footer>
+</div>
